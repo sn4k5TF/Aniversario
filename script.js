@@ -910,6 +910,34 @@ document.addEventListener(
 
 
 // =========================================
+// BOTÓN DESBLOQUEAR
+// =========================================
+
+botonDesbloquear.addEventListener(
+    "click",
+    desbloquearPieza
+);
+
+
+// =========================================
+// ENTER EN EL INPUT
+// =========================================
+
+codigoInput.addEventListener(
+    "keydown",
+    event => {
+
+        if (event.key === "Enter") {
+
+            desbloquearPieza();
+
+        }
+
+    }
+);
+
+
+// =========================================
 // CARGAR ESTADO INICIAL
 // =========================================
 
