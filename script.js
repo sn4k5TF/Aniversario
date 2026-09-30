@@ -872,7 +872,6 @@ document.addEventListener(
 
         }
 
-
         if (
             visor.classList.contains(
                 "activo"
@@ -883,7 +882,6 @@ document.addEventListener(
 
         }
 
-
         if (
             modalCarta.classList.contains(
                 "activo"
@@ -893,7 +891,6 @@ document.addEventListener(
             cerrarCartaFuncion();
 
         }
-
 
         if (
             modalFinal.classList.contains(
@@ -919,9 +916,7 @@ botonDesbloquear.addEventListener(
 );
 
 
-// =========================================
-// ENTER EN EL INPUT
-// =========================================
+// Permitir pulsar ENTER
 
 codigoInput.addEventListener(
     "keydown",
