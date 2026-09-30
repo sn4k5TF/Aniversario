@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>12 meses ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="app">
+
+        <!-- =========================================
+             CABECERA
+        ========================================== -->
+
+        <section class="cabecera">
+
+            <div class="corazon">
+                ♥
+            </div>
+
+            <h1>
+                <span class="numero-doce">12</span>
+                <span class="meses">meses.</span>
+            </h1>
+
+            <p>
+                Cada día, una pieza de nuestra historia.
+            </p>
+
+        </section>
+
+
+        <!-- =========================================
+             CÓDIGO
+        ========================================== -->
+
+        <section class="codigo">
+
+            <h2>Desbloquea tu recuerdo</h2>
+
+            <p>
+                Introduce el código que has recibido.
+            </p>
+
+            <div class="codigo-input">
+
+                <input
+                    type="text"
+                    id="codigoInput"
+                    placeholder="Escribe tu código..."
+                    autocomplete="off"
+                >
+
+                <button id="desbloquear">
+                    DESBLOQUEAR
+                </button>
+
+            </div>
+
+            <div id="mensaje"></div>
+
+        </section>
+
+
+        <!-- =========================================
+             PIEZAS
+        ========================================== -->
+
+        <section class="piezas-section">
+
+            <h2>Tus piezas</h2>
+
+            <p>
+                Selecciona una pieza y después el lugar donde crees que encaja.
+            </p>
+
+            <div
+                id="piezasDisponibles"
+                class="piezas-disponibles"
+            ></div>
+
+        </section>
+
+
+        <!-- =========================================
+             PUZZLE
+        ========================================== -->
+
+        <section class="puzzle-section">
+
+            <h2>Nuestra historia</h2>
+
+            <div
+                id="puzzle"
+                class="puzzle"
+            ></div>
+
+
+            <!-- BOTÓN REGALO FINAL -->
+
+            <div
+                id="regaloFinal"
+                class="regalo-final"
+            >
+
+                <button
+                    id="abrirRegaloFinal"
+                    class="boton-regalo"
+                >
+                    ❤️ VER NUESTRO REGALO FINAL
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================
+         VISOR DE FOTO
+    ========================================== -->
+
+    <div
+        id="visor"
+        class="visor"
+    >
+
+        <div class="visor-contenido">
+
+            <button
+                id="cerrarVisor"
+                class="cerrar-visor"
+            >
+                SALIR
+            </button>
+
+            <img
+                id="imagenGrande"
+                src=""
+                alt="Recuerdo"
+            >
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================
+         MODAL FINAL
+    ========================================== -->
+
+    <div
+        id="modalFinal"
+        class="modal-final"
+    >
+
+        <div class="modal-final-contenido">
+
+            <div class="final-corazon">
+                ♥
+            </div>
+
+            <h2>
+                Lo has conseguido.
+            </h2>
+
+            <p>
+                Has reconstruido nuestra historia.
+            </p>
+
+            <p class="final-subtexto">
+                Ahora quedan tres últimas cosas para ti.
+            </p>
+
+
+            <div class="final-botones">
+
+                <!-- MOSAICO -->
+
+                <a
+                    id="descargarMosaico"
+                    class="boton-final"
+                    href="mosaico.png"
+                    download="nuestro-mosaico.png"
+                >
+                    📥 GUARDAR NUESTRO RECUERDO
+                </a>
+
+
+                <!-- CARTA -->
+
+                <button
+                    id="abrirCarta"
+                    class="boton-final boton-carta"
+                >
+                    💌 LEER MI CARTA
+                </button>
+
+
+                <!-- VIDEO -->
+
+                <a
+                    id="videoYoutube"
+                    class="boton-final boton-video"
+                    href="https://www.youtube.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    ▶ VER EL VÍDEO
+                </a>
+
+            </div>
+
+
+            <button
+                id="cerrarFinal"
+                class="cerrar-final"
+            >
+                CERRAR
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================
+         MODAL CARTA
+    ========================================== -->
+
+    <div
+        id="modalCarta"
+        class="modal-carta"
+    >
+
+        <div class="carta-contenido">
+
+            <button
+                id="cerrarCarta"
+                class="cerrar-carta"
+                aria-label="Cerrar carta"
+            >
+                ×
+            </button>
+
+
+            <div class="carta-corazon">
+                ♥
+            </div>
+
+
+            <h2 class="carta-titulo">
+                Para ti, mi amor
+            </h2>
+
+
+            <div class="carta-linea"></div>
+
+
+            <div class="carta-texto">
+
+                <p>
+                    Hola, mi amor.
+                </p>
+
+
+                <p>
+                    Qué locura, no? Un año ya juntos…
+                </p>
+
+
+                <p>
+                    Un año en el que me has enseñado a ser mejor persona,
+                    a querer, a crecer y a entender muchas cosas de una
+                    manera diferente.
+                </p>
+
+
+                <p>
+                    Quién le diría al pequeño Nacho que ahora mismo estaría
+                    con la mujer más bonita y la mejor persona que ha conocido.
+                    Cada día estoy más feliz de estar a tu lado, de verte estudiar,
+                    aunque trabajar aún no (nini) (de momento), de verte esforzarte
+                    por ser mejor y de querer formar un futuro en el que espero
+                    estar yo.
+                </p>
+
+
+                <p>
+                    Estoy muy orgulloso de ti, de lo que eres y de la persona
+                    en la que te estás convirtiendo. De cómo cuidas a los tuyos,
+                    de cómo te preocupas por la gente que quieres y de la alegría
+                    con la que me cuentas algo de alguien. De cómo se te iluminan
+                    los ojos mientras me explicas un chisme y te vas riendo.
+                </p>
+
+
+                <p>
+                    Pero también estoy muy orgulloso de cómo eres conmigo.
+                    De cómo me cuidas, de cómo me tratas, de cómo me quieres
+                    y de cómo siempre respetas mi forma de ser. Me haces sentir
+                    querido, escuchado y valorado, y eso es algo que quizá no
+                    te diga tantas veces como debería.
+                </p>
+
+
+                <p>
+                    Me encanta poder ser yo mismo contigo, saber que puedo
+                    contarte cualquier cosa y sentir que estás ahí para escucharme,
+                    apoyarme o simplemente hacerme reír cuando lo necesito.
+                </p>
+
+
+                <p>
+                    También me encanta todo lo que me enseñas, incluso sin darte
+                    cuenta. Me haces ver las cosas desde otros puntos de vista,
+                    aprender de ti y querer ser una mejor versión de mí mismo.
+                    Y creo que una de las cosas más bonitas de nosotros es que
+                    podemos crecer juntos sin dejar de ser nosotros mismos.
+                </p>
+
+
+                <p>
+                    Te haría una lista con todas las cosas que amo de ti,
+                    pero ya lo has hecho tú y no sería tan original.
+                </p>
+
+
+                <p>
+                    Amo crear stickers contigo, burlarme de ti y que te piques,
+                    o al revés, que te guste picarme y que te rías. Me encanta
+                    que me envíes vídeo-audios riéndote de alguna parida que
+                    he dicho, aunque, siendo sincero, verte reír es lo que más
+                    feliz me hace.
+                </p>
+
+
+                <p>
+                    Me encantan nuestras tonterías, nuestras bromas, nuestros
+                    momentos juntos y todas esas pequeñas cosas que quizás
+                    desde fuera no significan nada, pero que para mí hacen que
+                    estar contigo sea tan especial.
+                </p>
+
+
+                <p>
+                    Por no mencionar que estás hecha todo un quesito
+                    (de los que me gustan a mí, que no soy muy quesero).
+                </p>
+
+
+                <p>
+                    Y aunque haya días mejores y días peores, no cambiaría
+                    todo lo que hemos vivido durante este año por nada.
+                    Porque cada momento contigo, incluso los más simples,
+                    se ha convertido en parte de algo que quiero seguir construyendo.
+                </p>
+
+
+                <p>
+                    Solamente puedo decirte que te amo, que estoy muy feliz
+                    a tu lado y que ojalá a este 1 que hacemos de años se le
+                    añadan muchos números y ceros más.
+                </p>
+
+
+                <p>
+                    Quiero que formemos un bonito futuro juntos, que crezcamos,
+                    que aprendamos el uno del otro, que sigamos riéndonos de
+                    nuestras tonterías y que nos amemos cada día más.
+                </p>
+
+
+                <p>
+                    No sé qué nos depararán todos esos números y ceros que espero
+                    que vengan después de este 1, pero sí sé que quiero descubrirlo
+                    contigo.
+                </p>
+
+
+                <p>
+                    Te amo mucho, micu maco.
+                </p>
+
+
+                <p class="firma">
+                    Y feliz aniversario, mi amor. ❤️
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

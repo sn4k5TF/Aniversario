@@ -1,0 +1,1061 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    padding: 40px 20px;
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            rgba(8, 8, 8, 0.78),
+            rgba(8, 8, 8, 0.78)
+        ),
+        url("images/perros2.png");
+
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+
+.app {
+    width: 100%;
+
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    padding: 40px 20px 80px;
+}
+
+
+/* =========================================
+   CABECERA
+========================================= */
+
+.cabecera {
+    text-align: center;
+
+    margin-bottom: 55px;
+
+    padding-top: 15px;
+}
+
+
+.corazon {
+    font-size: 58px;
+
+    color: #e63946;
+
+    line-height: 1;
+
+    margin-bottom: 22px;
+
+    animation: latido 2.2s ease-in-out infinite;
+
+    text-shadow:
+        0 0 20px rgba(230, 57, 70, 0.15);
+}
+
+
+@keyframes latido {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    10% {
+        transform: scale(1.08);
+    }
+
+    20% {
+        transform: scale(1);
+    }
+
+    30% {
+        transform: scale(1.05);
+    }
+
+    40% {
+        transform: scale(1);
+    }
+
+}
+
+
+h1 {
+    font-size: 58px;
+
+    font-weight: 300;
+
+    letter-spacing: -2px;
+
+    line-height: 1;
+
+    margin-bottom: 18px;
+}
+
+
+.numero-doce {
+    color: #e63946;
+
+    font-weight: 500;
+}
+
+
+.meses {
+    color: white;
+
+    font-weight: 300;
+}
+
+
+.cabecera p {
+    color: #999;
+
+    font-size: 16px;
+
+    letter-spacing: 0.3px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   TÍTULOS GENERALES
+========================================= */
+
+h2 {
+    font-size: 25px;
+
+    font-weight: 400;
+
+    margin-bottom: 10px;
+}
+
+
+p {
+    color: #bdbdbd;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   CÓDIGO
+========================================= */
+
+.codigo {
+    text-align: center;
+
+    margin-bottom: 50px;
+}
+
+
+.codigo-input {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+
+.codigo-input input {
+    width: 260px;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    border: 1px solid #444;
+
+    background: #1a1a1f;
+
+    color: white;
+
+    font-size: 16px;
+
+    outline: none;
+}
+
+
+.codigo-input input:focus {
+    border-color: #777;
+}
+
+
+.codigo-input button {
+    padding: 15px 20px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: white;
+
+    color: #111;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: transform 0.2s;
+}
+
+
+.codigo-input button:hover {
+    transform: scale(1.03);
+}
+
+
+#mensaje {
+    margin-top: 15px;
+
+    min-height: 25px;
+
+    color: #ddd;
+}
+
+
+.mensaje-error {
+    color: #ff8b8b;
+}
+
+
+.mensaje-ok {
+    color: #a5f5b0;
+}
+
+
+/* =========================================
+   PIEZAS
+========================================= */
+
+.piezas-section {
+    text-align: center;
+
+    margin-bottom: 50px;
+}
+
+
+.piezas-disponibles {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+    margin-top: 25px;
+}
+
+
+.pieza-disponible {
+    width: 120px;
+
+    height: 120px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    border: 3px solid transparent;
+
+    transition:
+        transform 0.2s,
+        border 0.2s;
+}
+
+
+.pieza-disponible:hover {
+    transform: scale(1.04);
+}
+
+
+.pieza-seleccionada {
+    border: 3px solid white;
+}
+
+
+/* =========================================
+   PUZZLE
+========================================= */
+
+.puzzle-section {
+    text-align: center;
+}
+
+
+.puzzle {
+    width: 100%;
+
+    max-width: 800px;
+
+    margin: 30px auto 0;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 2px;
+
+    background: #333;
+}
+
+
+.casilla {
+    aspect-ratio: 1 / 1;
+
+    background: #19191d;
+
+    position: relative;
+
+    cursor: pointer;
+
+    overflow: hidden;
+}
+
+
+.casilla img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+.casilla:hover {
+    background: #24242a;
+}
+
+
+.casilla-correcta {
+    cursor: default;
+}
+
+
+/* =========================================
+   REGALO FINAL
+========================================= */
+
+.regalo-final {
+    display: none;
+
+    justify-content: center;
+
+    margin-top: 35px;
+}
+
+
+.regalo-final.visible {
+    display: flex;
+}
+
+
+.boton-regalo {
+    padding: 16px 25px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: white;
+
+    color: #111;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s,
+        opacity 0.2s;
+}
+
+
+.boton-regalo:hover {
+    transform: scale(1.03);
+
+    opacity: 0.92;
+}
+
+
+/* =========================================
+   VISOR DE FOTO
+========================================= */
+
+.visor {
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.94);
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    z-index: 9999;
+
+    padding: 20px;
+}
+
+
+.visor.activo {
+    display: flex;
+}
+
+
+.visor-contenido {
+    position: relative;
+
+    width: 100%;
+
+    max-width: 1000px;
+
+    max-height: 95vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.visor-contenido img {
+    max-width: 100%;
+
+    max-height: 90vh;
+
+    width: auto;
+
+    height: auto;
+
+    object-fit: contain;
+
+    border-radius: 8px;
+
+    display: block;
+}
+
+
+.cerrar-visor {
+    position: absolute;
+
+    top: -45px;
+
+    right: 0;
+
+    padding: 10px 18px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: white;
+
+    color: #111;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    z-index: 2;
+
+    transition: transform 0.2s;
+}
+
+
+.cerrar-visor:hover {
+    transform: scale(1.03);
+}
+
+
+/* =========================================
+   MODAL FINAL
+========================================= */
+
+.modal-final {
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.94);
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    z-index: 10000;
+
+    padding: 20px;
+}
+
+
+.modal-final.activo {
+    display: flex;
+}
+
+
+.modal-final-contenido {
+    width: 100%;
+
+    max-width: 520px;
+
+    background: #18181d;
+
+    border: 1px solid #333;
+
+    border-radius: 18px;
+
+    padding: 45px 30px 30px;
+
+    text-align: center;
+
+    box-shadow:
+        0 20px 80px rgba(0, 0, 0, 0.5);
+}
+
+
+.final-corazon {
+    font-size: 55px;
+
+    color: #e63946;
+
+    margin-bottom: 20px;
+}
+
+
+.modal-final-contenido h2 {
+    font-size: 32px;
+
+    margin-bottom: 12px;
+}
+
+
+.modal-final-contenido p {
+    font-size: 17px;
+
+    color: #ddd;
+}
+
+
+.final-subtexto {
+    margin-top: 10px;
+
+    font-size: 15px !important;
+
+    color: #999 !important;
+}
+
+
+.final-botones {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    margin-top: 30px;
+}
+
+
+.boton-final {
+    display: block;
+
+    width: 100%;
+
+    padding: 15px 20px;
+
+    border-radius: 10px;
+
+    background: white;
+
+    color: #111;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    border: none;
+
+    transition:
+        transform 0.2s,
+        opacity 0.2s;
+}
+
+
+.boton-final:hover {
+    transform: scale(1.02);
+
+    opacity: 0.92;
+}
+
+
+/* BOTÓN CARTA */
+
+.boton-carta {
+    background: #e63946;
+
+    color: white;
+}
+
+
+/* BOTÓN VIDEO */
+
+.boton-video {
+    background: #27272d;
+
+    color: white;
+
+    border: 1px solid #444;
+}
+
+
+.cerrar-final {
+    margin-top: 25px;
+
+    background: none;
+
+    border: none;
+
+    color: #999;
+
+    cursor: pointer;
+
+    font-size: 14px;
+}
+
+
+.cerrar-final:hover {
+    color: white;
+}
+
+
+/* =========================================
+   MODAL CARTA
+========================================= */
+
+.modal-carta {
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.92);
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    z-index: 11000;
+
+    padding: 25px;
+}
+
+
+.modal-carta.activo {
+    display: flex;
+}
+
+
+.carta-contenido {
+    position: relative;
+
+    width: 100%;
+
+    max-width: 720px;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    background: #f4eee4;
+
+    color: #252525;
+
+    border-radius: 6px;
+
+    padding: 55px 65px 60px;
+
+    box-shadow:
+        0 25px 100px rgba(0, 0, 0, 0.6);
+
+    animation: aparecerCarta 0.3s ease;
+}
+
+
+@keyframes aparecerCarta {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(15px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+
+.cerrar-carta {
+    position: absolute;
+
+    top: 15px;
+
+    right: 20px;
+
+    width: 35px;
+
+    height: 35px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #777;
+
+    font-size: 30px;
+
+    line-height: 30px;
+
+    cursor: pointer;
+
+    transition:
+        color 0.2s,
+        transform 0.2s;
+}
+
+
+.cerrar-carta:hover {
+    color: #222;
+
+    transform: scale(1.1);
+}
+
+
+.carta-corazon {
+    text-align: center;
+
+    color: #e63946;
+
+    font-size: 42px;
+
+    line-height: 1;
+
+    margin-bottom: 15px;
+}
+
+
+.carta-titulo {
+    text-align: center;
+
+    color: #252525;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 31px;
+
+    font-weight: normal;
+
+    margin-bottom: 18px;
+}
+
+
+.carta-linea {
+    width: 55px;
+
+    height: 1px;
+
+    background: #d1c5b5;
+
+    margin: 0 auto 35px;
+}
+
+
+.carta-texto {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 17px;
+
+    line-height: 1.75;
+
+    color: #333;
+
+    text-align: left;
+}
+
+
+.carta-texto p {
+    color: #333;
+
+    margin-bottom: 22px;
+
+    line-height: 1.75;
+}
+
+
+.carta-texto p:first-child {
+    font-size: 20px;
+
+    margin-bottom: 28px;
+}
+
+
+.carta-texto .firma {
+    text-align: right;
+
+    margin-top: 35px;
+
+    margin-bottom: 0;
+
+    font-size: 19px;
+
+    color: #222;
+}
+
+
+/* =========================================
+   MÓVIL
+========================================= */
+
+@media (max-width: 600px) {
+
+    .app {
+        padding: 30px 12px 60px;
+    }
+
+
+    /* CABECERA */
+
+    .cabecera {
+        padding-top: 5px;
+
+        margin-bottom: 45px;
+    }
+
+
+    .corazon {
+        font-size: 50px;
+
+        margin-bottom: 18px;
+    }
+
+
+    h1 {
+        font-size: 43px;
+
+        letter-spacing: -1.5px;
+
+        margin-bottom: 15px;
+    }
+
+
+    .cabecera p {
+        font-size: 15px;
+
+        padding: 0 10px;
+    }
+
+
+    h2 {
+        font-size: 21px;
+    }
+
+
+    /* CÓDIGO */
+
+    .codigo-input {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+
+    .codigo-input input {
+        width: 100%;
+
+        max-width: 350px;
+    }
+
+
+    .codigo-input button {
+        width: 100%;
+
+        max-width: 350px;
+    }
+
+
+    /* PIEZAS */
+
+    .pieza-disponible {
+        width: 90px;
+
+        height: 90px;
+    }
+
+
+    /* PUZZLE */
+
+    .puzzle {
+        gap: 1px;
+    }
+
+
+    /* BOTÓN REGALO */
+
+    .boton-regalo {
+        width: 100%;
+
+        max-width: 350px;
+
+        padding: 15px 18px;
+    }
+
+
+    /* VISOR */
+
+    .visor {
+        padding: 10px;
+    }
+
+
+    .visor-contenido {
+        max-height: 90vh;
+    }
+
+
+    .visor-contenido img {
+        max-width: 100%;
+
+        max-height: 80vh;
+    }
+
+
+    .cerrar-visor {
+        top: -45px;
+
+        right: 5px;
+
+        padding: 9px 14px;
+
+        font-size: 13px;
+    }
+
+
+    /* MODAL FINAL */
+
+    .modal-final {
+        padding: 15px;
+    }
+
+
+    .modal-final-contenido {
+        padding: 35px 20px 25px;
+    }
+
+
+    .modal-final-contenido h2 {
+        font-size: 27px;
+    }
+
+
+    .final-corazon {
+        font-size: 45px;
+    }
+
+
+    /* CARTA */
+
+    .modal-carta {
+        padding: 10px;
+    }
+
+
+    .carta-contenido {
+        max-height: 94vh;
+
+        padding: 45px 25px 40px;
+
+        border-radius: 5px;
+    }
+
+
+    .carta-corazon {
+        font-size: 36px;
+
+        margin-bottom: 12px;
+    }
+
+
+    .carta-titulo {
+        font-size: 26px;
+    }
+
+
+    .carta-linea {
+        margin-bottom: 28px;
+    }
+
+
+    .carta-texto {
+        font-size: 16px;
+
+        line-height: 1.7;
+    }
+
+
+    .carta-texto p {
+        line-height: 1.7;
+
+        margin-bottom: 20px;
+    }
+
+
+    .carta-texto p:first-child {
+        font-size: 19px;
+    }
+
+
+    .carta-texto .firma {
+        font-size: 18px;
+
+        margin-top: 30px;
+    }
+
+}
